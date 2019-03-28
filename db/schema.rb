@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_032852) do
+ActiveRecord::Schema.define(version: 2019_03_28_043724) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "shopping_list_id"
+    t.index ["shopping_list_id"], name: "index_products_on_shopping_list_id"
   end
 
   create_table "shopping_lists", force: :cascade do |t|

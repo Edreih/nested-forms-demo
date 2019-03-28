@@ -16,11 +16,6 @@
     <%= f.text_field :name %>
   </div>
 
-<!--  <div class="field">-->
-    <%#= form.label :product_id %>
-    <%#= form.text_field :product_id %>
-<!--  </div>-->
-
   <%= f.fields_for :products do |builder| %>
     <%= render 'product_fields', f: builder %>
   <% end %>

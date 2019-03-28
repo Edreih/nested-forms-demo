@@ -69,6 +69,6 @@ class ShoppingListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shopping_list_params
-      params.require(:shopping_list).permit(:name)
+      params.require(:shopping_list).permit(:name, products_attributes: [:id, :name, :price, :_destroy])
     end
 end
