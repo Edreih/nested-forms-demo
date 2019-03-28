@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, "Shopping List Name" %>
+    <%= f.label :name, "Shopping List Name:" %>
     <%= f.text_field :name %>
   </div>
 
@@ -20,8 +20,8 @@
     <%= render 'product_fields', f: builder %>
   <% end %>
 
-  <div>
-  <%= link_to_add_product "Add Product", f, :products%>
+  <div class="field">
+    <%= link_to_add_product "Add Product", f, :products%>
   </div>
   <div class="actions">
     <%= f.submit %>
